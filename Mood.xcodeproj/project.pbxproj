@@ -9,21 +9,59 @@
 /* Begin PBXBuildFile section */
 		8498EED0247B095700794E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EECF247B095700794E8F /* AppDelegate.swift */; };
 		8498EED2247B095700794E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED1247B095700794E8F /* SceneDelegate.swift */; };
-		8498EED4247B095700794E8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED3247B095700794E8F /* ContentView.swift */; };
+		8498EED4247B095700794E8F /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED3247B095700794E8F /* MoodView.swift */; };
 		8498EED6247B095A00794E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8498EED5247B095A00794E8F /* Assets.xcassets */; };
 		8498EED9247B095A00794E8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8498EED8247B095A00794E8F /* Preview Assets.xcassets */; };
 		8498EEDC247B095A00794E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8498EEDA247B095A00794E8F /* LaunchScreen.storyboard */; };
+		8498EEEA247B09B500794E8F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498EEE9247B09B500794E8F /* NotificationCenter.framework */; };
+		8498EEED247B09B500794E8F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEEC247B09B500794E8F /* TodayViewController.swift */; };
+		8498EEF0247B09B500794E8F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8498EEEE247B09B500794E8F /* MainInterface.storyboard */; };
+		8498EEF4247B09B500794E8F /* Current Mood.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8498EEE7247B09B500794E8F /* Current Mood.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8498EEF9247B1FE300794E8F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEEC247B09B500794E8F /* TodayViewController.swift */; };
+		8498EEFA247B203000794E8F /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED3247B095700794E8F /* MoodView.swift */; };
+		8498EEFC247B208200794E8F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEFB247B208200794E8F /* TodayView.swift */; };
+		8498EEFD247B20B100794E8F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEFB247B208200794E8F /* TodayView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8498EEF2247B09B500794E8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8498EEC4247B095700794E8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8498EEE6247B09B500794E8F;
+			remoteInfo = "mood-ext";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8498EEF5247B09B500794E8F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8498EEF4247B09B500794E8F /* Current Mood.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		8498EECC247B095700794E8F /* mood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8498EECC247B095700794E8F /* Mood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8498EECF247B095700794E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8498EED1247B095700794E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8498EED3247B095700794E8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8498EED3247B095700794E8F /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
 		8498EED5247B095A00794E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8498EED8247B095A00794E8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8498EEDB247B095A00794E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8498EEDD247B095A00794E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8498EEE7247B09B500794E8F /* Current Mood.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Current Mood.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8498EEE9247B09B500794E8F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8498EEEC247B09B500794E8F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		8498EEEF247B09B500794E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8498EEF1247B09B500794E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8498EEFB247B208200794E8F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +72,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8498EEE4247B09B500794E8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8498EEEA247B09B500794E8F /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8498EEC3247B095700794E8F = {
 			isa = PBXGroup;
 			children = (
-				8498EECE247B095700794E8F /* mood */,
+				8498EECE247B095700794E8F /* Mood */,
+				8498EEEB247B09B500794E8F /* Current Mood */,
+				8498EEE8247B09B500794E8F /* Frameworks */,
 				8498EECD247B095700794E8F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,23 +96,25 @@
 		8498EECD247B095700794E8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8498EECC247B095700794E8F /* mood.app */,
+				8498EECC247B095700794E8F /* Mood.app */,
+				8498EEE7247B09B500794E8F /* Current Mood.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8498EECE247B095700794E8F /* mood */ = {
+		8498EECE247B095700794E8F /* Mood */ = {
 			isa = PBXGroup;
 			children = (
 				8498EECF247B095700794E8F /* AppDelegate.swift */,
 				8498EED1247B095700794E8F /* SceneDelegate.swift */,
-				8498EED3247B095700794E8F /* ContentView.swift */,
+				8498EED3247B095700794E8F /* MoodView.swift */,
 				8498EED5247B095A00794E8F /* Assets.xcassets */,
 				8498EEDA247B095A00794E8F /* LaunchScreen.storyboard */,
 				8498EEDD247B095A00794E8F /* Info.plist */,
 				8498EED7247B095A00794E8F /* Preview Content */,
+				8498EEFB247B208200794E8F /* TodayView.swift */,
 			);
-			path = mood;
+			path = Mood;
 			sourceTree = "<group>";
 		};
 		8498EED7247B095A00794E8F /* Preview Content */ = {
@@ -75,25 +125,62 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8498EEE8247B09B500794E8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8498EEE9247B09B500794E8F /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8498EEEB247B09B500794E8F /* Current Mood */ = {
+			isa = PBXGroup;
+			children = (
+				8498EEEC247B09B500794E8F /* TodayViewController.swift */,
+				8498EEEE247B09B500794E8F /* MainInterface.storyboard */,
+				8498EEF1247B09B500794E8F /* Info.plist */,
+			);
+			path = "Current Mood";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8498EECB247B095700794E8F /* mood */ = {
+		8498EECB247B095700794E8F /* Mood */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8498EEE0247B095A00794E8F /* Build configuration list for PBXNativeTarget "mood" */;
+			buildConfigurationList = 8498EEE0247B095A00794E8F /* Build configuration list for PBXNativeTarget "Mood" */;
 			buildPhases = (
 				8498EEC8247B095700794E8F /* Sources */,
 				8498EEC9247B095700794E8F /* Frameworks */,
 				8498EECA247B095700794E8F /* Resources */,
+				8498EEF5247B09B500794E8F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8498EEF3247B09B500794E8F /* PBXTargetDependency */,
+			);
+			name = Mood;
+			productName = mood;
+			productReference = 8498EECC247B095700794E8F /* Mood.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8498EEE6247B09B500794E8F /* Current Mood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8498EEF8247B09B500794E8F /* Build configuration list for PBXNativeTarget "Current Mood" */;
+			buildPhases = (
+				8498EEE3247B09B500794E8F /* Sources */,
+				8498EEE4247B09B500794E8F /* Frameworks */,
+				8498EEE5247B09B500794E8F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = mood;
-			productName = mood;
-			productReference = 8498EECC247B095700794E8F /* mood.app */;
-			productType = "com.apple.product-type.application";
+			name = "Current Mood";
+			productName = "mood-ext";
+			productReference = 8498EEE7247B09B500794E8F /* Current Mood.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -108,9 +195,12 @@
 					8498EECB247B095700794E8F = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					8498EEE6247B09B500794E8F = {
+						CreatedOnToolsVersion = 11.5;
+					};
 				};
 			};
-			buildConfigurationList = 8498EEC7247B095700794E8F /* Build configuration list for PBXProject "mood" */;
+			buildConfigurationList = 8498EEC7247B095700794E8F /* Build configuration list for PBXProject "Mood" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +213,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8498EECB247B095700794E8F /* mood */,
+				8498EECB247B095700794E8F /* Mood */,
+				8498EEE6247B09B500794E8F /* Current Mood */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +230,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8498EEE5247B09B500794E8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8498EEF0247B09B500794E8F /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -146,13 +245,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8498EEF9247B1FE300794E8F /* TodayViewController.swift in Sources */,
+				8498EEFC247B208200794E8F /* TodayView.swift in Sources */,
 				8498EED0247B095700794E8F /* AppDelegate.swift in Sources */,
 				8498EED2247B095700794E8F /* SceneDelegate.swift in Sources */,
-				8498EED4247B095700794E8F /* ContentView.swift in Sources */,
+				8498EED4247B095700794E8F /* MoodView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8498EEE3247B09B500794E8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8498EEFD247B20B100794E8F /* TodayView.swift in Sources */,
+				8498EEFA247B203000794E8F /* MoodView.swift in Sources */,
+				8498EEED247B09B500794E8F /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8498EEF3247B09B500794E8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8498EEE6247B09B500794E8F /* Current Mood */;
+			targetProxy = 8498EEF2247B09B500794E8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8498EEDA247B095A00794E8F /* LaunchScreen.storyboard */ = {
@@ -161,6 +280,14 @@
 				8498EEDB247B095A00794E8F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8498EEEE247B09B500794E8F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8498EEEF247B09B500794E8F /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,12 +410,14 @@
 		8498EEE1247B095A00794E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"mood/Preview Content\"";
 				DEVELOPMENT_TEAM = G46D8B9639;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = mood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,12 +432,14 @@
 		8498EEE2247B095A00794E8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"mood/Preview Content\"";
 				DEVELOPMENT_TEAM = G46D8B9639;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = mood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,10 +451,50 @@
 			};
 			name = Release;
 		};
+		8498EEF6247B09B500794E8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G46D8B9639;
+				INFOPLIST_FILE = "Current Mood/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hbb.mood.mood-ext";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8498EEF7247B09B500794E8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G46D8B9639;
+				INFOPLIST_FILE = "Current Mood/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hbb.mood.mood-ext";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8498EEC7247B095700794E8F /* Build configuration list for PBXProject "mood" */ = {
+		8498EEC7247B095700794E8F /* Build configuration list for PBXProject "Mood" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8498EEDE247B095A00794E8F /* Debug */,
@@ -332,11 +503,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8498EEE0247B095A00794E8F /* Build configuration list for PBXNativeTarget "mood" */ = {
+		8498EEE0247B095A00794E8F /* Build configuration list for PBXNativeTarget "Mood" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8498EEE1247B095A00794E8F /* Debug */,
 				8498EEE2247B095A00794E8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8498EEF8247B09B500794E8F /* Build configuration list for PBXNativeTarget "Current Mood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8498EEF6247B09B500794E8F /* Debug */,
+				8498EEF7247B09B500794E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
