@@ -61,6 +61,7 @@ struct MoodButtonStyle: ButtonStyle {
 			.background(Color.blue)
 			.cornerRadius(10)
 			.padding(.horizontal, 20)
+			.scaleEffect(configuration.isPressed ? 0.95 : 1.0)
 	}
 }
 
