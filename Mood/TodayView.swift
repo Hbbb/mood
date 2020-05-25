@@ -11,13 +11,27 @@ import SwiftUI
 struct TodayView: View {
     var body: some View {
 			HStack(alignment: .top) {
-				MoodButton(emoji: "☹️", text: "", value: 1)
-				MoodButton(emoji: "😕", text: "", value: 2)
-				MoodButton(emoji: "😐", text: "", value: 3)
-				MoodButton(emoji: "🙂", text: "", value: 4)
-				MoodButton(emoji: "😄", text: "", value: 5)
+				EmojiButton(emoji: "☹️", score: 1)
+				EmojiButton(emoji: "😕", score: 2)
+				EmojiButton(emoji: "😐", score: 3)
+				EmojiButton(emoji: "🙂", score: 4)
+				EmojiButton(emoji: "😄", score: 5)
 			}
     }
+}
+
+struct EmojiButton: View {
+	var emoji: String
+	var score: Int
+
+	var body: some View {
+		Button(action: { print(self.score) }) {
+			HStack {
+				Text(emoji)
+			}
+		}
+		.padding()
+	}
 }
 
 struct TestView_Previews: PreviewProvider {

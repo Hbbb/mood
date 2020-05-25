@@ -21,6 +21,8 @@
 		8498EEFA247B203000794E8F /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED3247B095700794E8F /* MoodView.swift */; };
 		8498EEFC247B208200794E8F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEFB247B208200794E8F /* TodayView.swift */; };
 		8498EEFD247B20B100794E8F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEFB247B208200794E8F /* TodayView.swift */; };
+		84B3756C247C474E00909E1C /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
+		84B3756D247C475200909E1C /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		8498EEEF247B09B500794E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8498EEF1247B09B500794E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8498EEFB247B208200794E8F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		84B3756B247C474E00909E1C /* MoodReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 				8498EEDD247B095A00794E8F /* Info.plist */,
 				8498EED7247B095A00794E8F /* Preview Content */,
 				8498EEFB247B208200794E8F /* TodayView.swift */,
+				84B3756B247C474E00909E1C /* MoodReport.swift */,
 			);
 			path = Mood;
 			sourceTree = "<group>";
@@ -247,6 +251,7 @@
 			files = (
 				8498EEF9247B1FE300794E8F /* TodayViewController.swift in Sources */,
 				8498EEFC247B208200794E8F /* TodayView.swift in Sources */,
+				84B3756C247C474E00909E1C /* MoodReport.swift in Sources */,
 				8498EED0247B095700794E8F /* AppDelegate.swift in Sources */,
 				8498EED2247B095700794E8F /* SceneDelegate.swift in Sources */,
 				8498EED4247B095700794E8F /* MoodView.swift in Sources */,
@@ -259,6 +264,7 @@
 			files = (
 				8498EEFD247B20B100794E8F /* TodayView.swift in Sources */,
 				8498EEFA247B203000794E8F /* MoodView.swift in Sources */,
+				84B3756D247C475200909E1C /* MoodReport.swift in Sources */,
 				8498EEED247B09B500794E8F /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

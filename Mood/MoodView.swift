@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct MoodView: View {
+	@State private var showingAlert = false
+
     var body: some View {
 			VStack {
 				Text("How are you feeling?")
@@ -17,38 +19,74 @@ struct MoodView: View {
 					.padding(.bottom, 40)
 
 			VStack {
-				MoodButton(emoji: "☹️", text: "Not Good", value: 1)
+				MoodButton(showingAlert: $showingAlert, emoji: "☹️", text: "Not Good", score: 1)
 					.buttonStyle(MoodButtonStyle())
-				MoodButton(emoji: "😕", text: "Meh", value: 2)
+				MoodButton(showingAlert: $showingAlert, emoji: "😕", text: "Meh", score: 2)
 					.buttonStyle(MoodButtonStyle())
-				MoodButton(emoji: "😐", text: "Okay", value: 3)
+				MoodButton(showingAlert: $showingAlert, emoji: "😐", text: "Okay", score: 3)
 					.buttonStyle(MoodButtonStyle())
-				MoodButton(emoji: "🙂", text: "Pretty Good", value: 4)
+				MoodButton(showingAlert: $showingAlert, emoji: "🙂", text: "Pretty Good", score: 4)
 					.buttonStyle(MoodButtonStyle())
-				MoodButton(emoji: "😄", text: "Great", value: 5)
+				MoodButton(showingAlert: $showingAlert, emoji: "😄", text: "Great", score: 5)
 					.buttonStyle(MoodButtonStyle())
 			}
+		}
+		.alert(isPresented: $showingAlert) {
+				Alert(title: Text("An error occured. Please try again"), dismissButton: .default(Text("Got it!")))
 		}
 	}
 }
 
 struct MoodButton: View {
+	@Binding var showingAlert: Bool
+
 	var emoji: String
 	var text: String
-	var value: Int
+	var score: Int
 
 	var body: some View {
-		Button(action: { print(self.value) }) {
+		Button(action: { self.onClick() }) {
 			HStack {
 				Text(emoji)
 
-				if text.count > 0 {
-					Text(text)
-						.fontWeight(.semibold)
-				}
+				Text(text)
+					.fontWeight(.semibold)
 			}
 		}
 		.padding()
+	}
+
+	func onClick() {
+		let url = URL(string: "https://httpstat.us/201")
+		guard let requestUrl = url else { fatalError() }
+
+		var request = URLRequest(url: requestUrl)
+		request.httpMethod = "POST"
+
+		request.setValue("application/json", forHTTPHeaderField: "Accept")
+		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+		let mood = MoodReport(score: self.score, deviceID: 0)
+		let json = try! JSONEncoder().encode(mood)
+
+		request.httpBody = json
+
+		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+			if let error = error {
+				self.showingAlert = true
+				print(error)
+				return
+			}
+
+			if let response = response as? HTTPURLResponse {
+				if response.statusCode >= 299 {
+					self.showingAlert = true
+					return
+				}
+			}
+		}
+
+		task.resume()
 	}
 }
 
