@@ -25,12 +25,26 @@ struct EmojiButton: View {
 	var score: Int
 
 	var body: some View {
-		Button(action: { print(self.score) }) {
+		Button(action: { self.onClick() }) {
 			HStack {
 				Text(emoji)
 			}
 		}
 		.padding()
+	}
+
+	func onClick() {
+		let mood = MoodReport(score: self.score, deviceID: 0)
+
+		mood.save() { result in
+			switch result {
+			case .success:
+				// Haptic?
+				print("success")
+			case .failure:
+				print("Failed")
+			}
+		}
 	}
 }
 
