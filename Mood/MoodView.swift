@@ -10,12 +10,13 @@ import SwiftUI
 
 struct MoodView: View {
 	@State private var showingAlert = false
-
     var body: some View {
-			VStack {
+			VStack(alignment: .leading) {
 				Text("How are you feeling?")
 					.fontWeight(.bold)
 					.font(.largeTitle)
+					.padding(.top, 50)
+					.padding(.leading, 20)
 					.padding(.bottom, 40)
 
 			VStack {
@@ -32,7 +33,7 @@ struct MoodView: View {
 			}
 		}
 		.alert(isPresented: $showingAlert) {
-				Alert(title: Text("An error occured. Please try again"), dismissButton: .default(Text("Got it!")))
+				Alert(title: Text("An error occured. Please try again"), dismissButton: .default(Text("OK")))
 		}
 	}
 }
@@ -79,7 +80,7 @@ struct MoodButton: View {
 			}
 
 			if let response = response as? HTTPURLResponse {
-				if response.statusCode >= 299 {
+				if response.statusCode != 201 {
 					self.showingAlert = true
 					return
 				}
@@ -99,7 +100,7 @@ struct MoodButtonStyle: ButtonStyle {
 			.background(Color.blue)
 			.cornerRadius(10)
 			.padding(.horizontal, 20)
-			.scaleEffect(configuration.isPressed ? 0.95 : 1.0)
+			.scaleEffect(configuration.isPressed ? 0.99 : 1.0)
 	}
 }
 
