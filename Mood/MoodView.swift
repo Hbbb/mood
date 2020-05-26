@@ -20,15 +20,15 @@ struct MoodView: View {
 					.padding(.bottom, 40)
 
 			VStack {
-				MoodButton(showingAlert: $showingAlert, emoji: "☹️", text: "Not Good", score: 1)
+				MoodButton(showingAlert: $showingAlert, emoji: "☹️", title: "Not Good", score: 1)
 					.buttonStyle(MoodButtonStyle())
-				MoodButton(showingAlert: $showingAlert, emoji: "😕", text: "Meh", score: 2)
+					MoodButton(showingAlert: $showingAlert, emoji: "😕", title: "Meh", score: 2)
 					.buttonStyle(MoodButtonStyle())
-				MoodButton(showingAlert: $showingAlert, emoji: "😐", text: "Okay", score: 3)
+					MoodButton(showingAlert: $showingAlert, emoji: "😐", title: "Okay", score: 3)
 					.buttonStyle(MoodButtonStyle())
-				MoodButton(showingAlert: $showingAlert, emoji: "🙂", text: "Pretty Good", score: 4)
+					MoodButton(showingAlert: $showingAlert, emoji: "🙂", title: "Pretty Good", score: 4)
 					.buttonStyle(MoodButtonStyle())
-				MoodButton(showingAlert: $showingAlert, emoji: "😄", text: "Great", score: 5)
+					MoodButton(showingAlert: $showingAlert, emoji: "😄", title: "Great", score: 5)
 					.buttonStyle(MoodButtonStyle())
 			}
 		}
@@ -42,7 +42,7 @@ struct MoodButton: View {
 	@Binding var showingAlert: Bool
 
 	var emoji: String
-	var text: String
+	var title: String
 	var score: Int
 
 	var body: some View {
@@ -50,44 +50,29 @@ struct MoodButton: View {
 			HStack {
 				Text(emoji)
 
-				Text(text)
-					.fontWeight(.semibold)
+				VStack(alignment: .leading) {
+					Text(title)
+						.fontWeight(.semibold)
+				}
+
+				Spacer()
+				Text(String(self.score))
 			}
 		}
 		.padding()
 	}
 
 	func onClick() {
-		let url = URL(string: "https://httpstat.us/201")
-		guard let requestUrl = url else { fatalError() }
-
-		var request = URLRequest(url: requestUrl)
-		request.httpMethod = "POST"
-
-		request.setValue("application/json", forHTTPHeaderField: "Accept")
-		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
 		let mood = MoodReport(score: self.score, deviceID: 0)
-		let json = try! JSONEncoder().encode(mood)
-
-		request.httpBody = json
-
-		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-			if let error = error {
+		mood.save() { result in
+			switch result {
+			case .success:
+				// Haptic?
+				print("success")
+			case .failure:
 				self.showingAlert = true
-				print(error)
-				return
-			}
-
-			if let response = response as? HTTPURLResponse {
-				if response.statusCode != 201 {
-					self.showingAlert = true
-					return
-				}
 			}
 		}
-
-		task.resume()
 	}
 }
 
@@ -98,9 +83,9 @@ struct MoodButtonStyle: ButtonStyle {
 			.padding()
 			.foregroundColor(.white)
 			.background(Color.blue)
-			.cornerRadius(10)
+			.cornerRadius(5)
 			.padding(.horizontal, 20)
-			.scaleEffect(configuration.isPressed ? 0.99 : 1.0)
+			.scaleEffect(configuration.isPressed ? 0.95 : 1.0)
 	}
 }
 
