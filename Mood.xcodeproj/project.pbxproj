@@ -23,6 +23,10 @@
 		8498EEFD247B20B100794E8F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEFB247B208200794E8F /* TodayView.swift */; };
 		84B3756C247C474E00909E1C /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
 		84B3756D247C475200909E1C /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
+		84B37570248216D000909E1C /* settings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 84B3756F248216D000909E1C /* settings.xcconfig */; };
+		84B37571248216D100909E1C /* settings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 84B3756F248216D000909E1C /* settings.xcconfig */; };
+		84B375732482184E00909E1C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B375722482184E00909E1C /* Config.swift */; };
+		84B375742482184E00909E1C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B375722482184E00909E1C /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,8 @@
 		8498EEF1247B09B500794E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8498EEFB247B208200794E8F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		84B3756B247C474E00909E1C /* MoodReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReport.swift; sourceTree = "<group>"; };
+		84B3756F248216D000909E1C /* settings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = settings.xcconfig; sourceTree = "<group>"; };
+		84B375722482184E00909E1C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,8 @@
 		8498EEC3247B095700794E8F = {
 			isa = PBXGroup;
 			children = (
+				84B3756F248216D000909E1C /* settings.xcconfig */,
+				84B375722482184E00909E1C /* Config.swift */,
 				8498EECE247B095700794E8F /* Mood */,
 				8498EEEB247B09B500794E8F /* Current Mood */,
 				8498EEE8247B09B500794E8F /* Frameworks */,
@@ -229,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8498EEDC247B095A00794E8F /* LaunchScreen.storyboard in Resources */,
+				84B37570248216D000909E1C /* settings.xcconfig in Resources */,
 				8498EED9247B095A00794E8F /* Preview Assets.xcassets in Resources */,
 				8498EED6247B095A00794E8F /* Assets.xcassets in Resources */,
 			);
@@ -239,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8498EEF0247B09B500794E8F /* MainInterface.storyboard in Resources */,
+				84B37571248216D100909E1C /* settings.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +261,7 @@
 			files = (
 				8498EEF9247B1FE300794E8F /* TodayViewController.swift in Sources */,
 				8498EEFC247B208200794E8F /* TodayView.swift in Sources */,
+				84B375732482184E00909E1C /* Config.swift in Sources */,
 				84B3756C247C474E00909E1C /* MoodReport.swift in Sources */,
 				8498EED0247B095700794E8F /* AppDelegate.swift in Sources */,
 				8498EED2247B095700794E8F /* SceneDelegate.swift in Sources */,
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8498EEFD247B20B100794E8F /* TodayView.swift in Sources */,
+				84B375742482184E00909E1C /* Config.swift in Sources */,
 				8498EEFA247B203000794E8F /* MoodView.swift in Sources */,
 				84B3756D247C475200909E1C /* MoodReport.swift in Sources */,
 				8498EEED247B09B500794E8F /* TodayViewController.swift in Sources */,
@@ -301,6 +313,7 @@
 /* Begin XCBuildConfiguration section */
 		8498EEDE247B095A00794E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B3756F248216D000909E1C /* settings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -361,6 +374,7 @@
 		};
 		8498EEDF247B095A00794E8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B3756F248216D000909E1C /* settings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

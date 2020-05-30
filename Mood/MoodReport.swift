@@ -10,20 +10,15 @@ import Foundation
 
 struct MoodReport: Codable {
 	var score: Int
-	var deviceID: Int
-	var dateTime: Date
+	var deviceID: String
 
-	init(score: Int, deviceID: Int) {
+	init(score: Int, deviceID: String) {
 		self.score = score
 		self.deviceID = deviceID
-		self.dateTime = Date()
 	}
 
 	func save(result: @escaping (Result<String, Error>) -> Void) {
-		let url = URL(string: "https://httpstat.us/422")
-		guard let requestUrl = url else { fatalError() }
-
-		var request = URLRequest(url: requestUrl)
+		var request = URLRequest(url: API.endpoint)
 		request.httpMethod = "POST"
 
 		request.setValue("application/json", forHTTPHeaderField: "Accept")
@@ -45,6 +40,7 @@ struct MoodReport: Codable {
 
 			guard response.statusCode == 201 else {
 				let error = NSError(domain: "save mood", code: 0, userInfo: nil)
+				print(error)
 				return result(.failure(error))
 			}
 

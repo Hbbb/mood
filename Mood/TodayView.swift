@@ -34,15 +34,17 @@ struct EmojiButton: View {
 	}
 
 	func onClick() {
-		let mood = MoodReport(score: self.score, deviceID: 0)
+		let deviceID = UIDevice.current.identifierForVendor!.uuidString
+		let mood = MoodReport(score: self.score, deviceID: deviceID)
+		let generator = UINotificationFeedbackGenerator()
+		generator.prepare()
 
 		mood.save() { result in
 			switch result {
 			case .success:
-				// Haptic?
-				print("success")
+				generator.notificationOccurred(.success)
 			case .failure:
-				print("Failed")
+				generator.notificationOccurred(.error)
 			}
 		}
 	}

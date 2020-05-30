@@ -8,11 +8,11 @@
 
 import UIKit
 import SwiftUI
+import UserNotifications
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+	var canShowNotifications = false
 	var window: UIWindow?
-
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -41,6 +41,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	func sceneDidBecomeActive(_ scene: UIScene) {
 		// Called when the scene has moved from an inactive state to an active state.
 		// Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+
+		let center = UNUserNotificationCenter.current()
+
+		if canShowNotifications {
+			scheduleNotification()
+		}
+
+		center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+			if granted {
+				self.canShowNotifications = true
+				self.scheduleNotification()
+			} else {
+					print("Rejected")
+			}
+		}
 	}
 
 	func sceneWillResignActive(_ scene: UIScene) {
@@ -57,6 +72,51 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// Called as the scene transitions from the foreground to the background.
 		// Use this method to save data, release shared resources, and store enough scene-specific state information
 		// to restore the scene back to its current state.
+	}
+
+	func scheduleNotification() {
+		let center = UNUserNotificationCenter.current()
+
+		let content = UNMutableNotificationContent()
+		content.title = "How are you feeling?"
+		content.body = "Take a minute to check in with yourself"
+		content.categoryIdentifier = "mood"
+		content.sound = UNNotificationSound.default
+
+		var morning = DateComponents()
+		morning.hour = 11
+		morning.minute = 0
+
+		var afternoon = DateComponents()
+		afternoon.hour = 15
+		afternoon.minute = 30
+
+		var evening = DateComponents()
+		evening.hour = 22
+		evening.minute = 30
+
+		let morningTrigger = UNCalendarNotificationTrigger(dateMatching: morning, repeats: true)
+		let afternoonTrigger = UNCalendarNotificationTrigger(dateMatching: afternoon, repeats: true)
+		let eveningTrigger = UNCalendarNotificationTrigger(dateMatching: evening, repeats: true)
+
+//		var test = DateComponents()
+//		test.hour = 21
+//		test.minute = 12
+//		let testTrigger = UNCalendarNotificationTrigger(dateMatching: test, repeats: true)
+//		let testRequest = UNNotificationRequest(identifier: "test", content: content, trigger: testTrigger)
+//		center.add(testRequest) { (error : Error?) in
+//			if let error = error {
+//				print(error)
+//			}
+//		}
+
+		let morningRequest = UNNotificationRequest(identifier: "mood-morning", content: content, trigger: morningTrigger)
+		let afternoonRequest = UNNotificationRequest(identifier: "mood-afternoon", content: content, trigger: afternoonTrigger)
+		let eveningRequest = UNNotificationRequest(identifier: "mood-evening", content: content, trigger: eveningTrigger)
+
+		center.add(morningRequest)
+		center.add(afternoonRequest)
+		center.add(eveningRequest)
 	}
 
 

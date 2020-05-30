@@ -9,27 +9,31 @@
 import SwiftUI
 
 struct MoodView: View {
+	let greatColor = Color(red: 0.16, green: 0.68, blue: 0.38)
+	let goodColor = Color(red: 0.16, green: 0.50, blue: 0.72)
+	let okayColor = Color(red: 0.90, green: 0.50, blue: 0.13)
+	let mehColor = Color(red: 0.61, green: 0.35, blue: 0.71)
+	let notGoodColor = Color(red: 0.50, green: 0.55, blue: 0.55)
+
 	@State private var showingAlert = false
     var body: some View {
-			VStack(alignment: .leading) {
+			VStack {
 				Text("How are you feeling?")
 					.fontWeight(.bold)
 					.font(.largeTitle)
-					.padding(.top, 50)
-					.padding(.leading, 20)
-					.padding(.bottom, 40)
+					.padding(.bottom, 30)
 
 			VStack {
+				MoodButton(showingAlert: $showingAlert, emoji: "😄", title: "Great", score: 5)
+					.buttonStyle(MoodButtonStyle(color: greatColor))
+				MoodButton(showingAlert: $showingAlert, emoji: "🙂", title: "Pretty Good", score: 4)
+					.buttonStyle(MoodButtonStyle(color: goodColor))
+				MoodButton(showingAlert: $showingAlert, emoji: "😐", title: "Okay", score: 3)
+					.buttonStyle(MoodButtonStyle(color: okayColor))
+				MoodButton(showingAlert: $showingAlert, emoji: "😕", title: "Meh", score: 2)
+					.buttonStyle(MoodButtonStyle(color: mehColor))
 				MoodButton(showingAlert: $showingAlert, emoji: "☹️", title: "Not Good", score: 1)
-					.buttonStyle(MoodButtonStyle())
-					MoodButton(showingAlert: $showingAlert, emoji: "😕", title: "Meh", score: 2)
-					.buttonStyle(MoodButtonStyle())
-					MoodButton(showingAlert: $showingAlert, emoji: "😐", title: "Okay", score: 3)
-					.buttonStyle(MoodButtonStyle())
-					MoodButton(showingAlert: $showingAlert, emoji: "🙂", title: "Pretty Good", score: 4)
-					.buttonStyle(MoodButtonStyle())
-					MoodButton(showingAlert: $showingAlert, emoji: "😄", title: "Great", score: 5)
-					.buttonStyle(MoodButtonStyle())
+					.buttonStyle(MoodButtonStyle(color: notGoodColor))
 			}
 		}
 		.alert(isPresented: $showingAlert) {
@@ -47,29 +51,29 @@ struct MoodButton: View {
 
 	var body: some View {
 		Button(action: { self.onClick() }) {
-			HStack {
+			VStack {
 				Text(emoji)
-
-				VStack(alignment: .leading) {
-					Text(title)
-						.fontWeight(.semibold)
-				}
-
-				Spacer()
-				Text(String(self.score))
+				.padding(.bottom, 10)
+				Text(title)
+					.fontWeight(.semibold)
 			}
 		}
 		.padding()
 	}
 
 	func onClick() {
-		let mood = MoodReport(score: self.score, deviceID: 0)
+		let deviceID = UIDevice.current.identifierForVendor!.uuidString
+		let mood = MoodReport(score: self.score, deviceID: deviceID)
+		
+		let generator = UINotificationFeedbackGenerator()
+		generator.prepare()
+
 		mood.save() { result in
 			switch result {
 			case .success:
-				// Haptic?
-				print("success")
+				generator.notificationOccurred(.success)
 			case .failure:
+				generator.notificationOccurred(.error)
 				self.showingAlert = true
 			}
 		}
@@ -77,14 +81,17 @@ struct MoodButton: View {
 }
 
 struct MoodButtonStyle: ButtonStyle {
+	var color: Color
+
 	func makeBody(configuration: Configuration) -> some View {
 		configuration.label
 			.frame(minWidth: 0, maxWidth: .infinity)
-			.padding()
+			.padding(.top, 10)
+			.padding(.bottom, 10)
 			.foregroundColor(.white)
-			.background(Color.blue)
+			.background(color)
 			.cornerRadius(5)
-			.padding(.horizontal, 20)
+			.padding(.horizontal, 10)
 			.scaleEffect(configuration.isPressed ? 0.95 : 1.0)
 	}
 }
@@ -92,5 +99,27 @@ struct MoodButtonStyle: ButtonStyle {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MoodView()
+    }
+}
+
+extension UIColor {
+    func lighter(by percentage: CGFloat = 30.0) -> UIColor? {
+        return self.adjust(by: abs(percentage) )
+    }
+
+    func darker(by percentage: CGFloat = 30.0) -> UIColor? {
+        return self.adjust(by: -1 * abs(percentage) )
+    }
+
+    func adjust(by percentage: CGFloat = 30.0) -> UIColor? {
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
+        if self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) {
+            return UIColor(red: min(red + percentage/100, 1.0),
+                           green: min(green + percentage/100, 1.0),
+                           blue: min(blue + percentage/100, 1.0),
+                           alpha: alpha)
+        } else {
+            return nil
+        }
     }
 }
