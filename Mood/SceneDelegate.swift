@@ -11,7 +11,6 @@ import SwiftUI
 import UserNotifications
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-	var canShowNotifications = false
 	var window: UIWindow?
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -44,13 +43,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		let center = UNUserNotificationCenter.current()
 
-		if canShowNotifications {
-			scheduleNotification()
-		}
-
 		center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
 			if granted {
-				self.canShowNotifications = true
 				self.scheduleNotification()
 			} else {
 					print("Rejected")
@@ -118,7 +112,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		center.add(afternoonRequest)
 		center.add(eveningRequest)
 	}
-
-
 }
 
