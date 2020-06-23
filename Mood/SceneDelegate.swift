@@ -43,9 +43,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		let center = UNUserNotificationCenter.current()
 
-		center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+		center.requestAuthorization(options: [.alert, .badge, .sound]) { [weak self] (granted, error) in
 			if granted {
-				self.scheduleNotification()
+				self?.scheduleNotification()
 			} else {
 					print("Rejected")
 			}
