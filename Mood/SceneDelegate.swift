@@ -17,9 +17,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
 		// If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
 		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        let defaults = UserDefaults.standard
+        var contentView: MoodView
 
-		// Create the SwiftUI view that provides the window contents.
-		let contentView = MoodView()
+        if let userId = defaults.string(forKey: "user-id") {
+            contentView = MoodView(userId: userId)
+        } else {
+            let uuid = UUID().uuidString
+            defaults.set(uuid, forKey: "user-id")
+            contentView = MoodView(userId: uuid)
+        }
 
 		// Use a UIHostingController as window root view controller.
 		if let windowScene = scene as? UIWindowScene {

@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FA7287D755D889D5CFC3965 /* Pods_Mood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93040F73FBAA1150E12AD623 /* Pods_Mood.framework */; };
+		3D360AB914E522D870F2B7B7 /* Pods_Current_Mood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455CA3C75CFEF2977A7ABBE8 /* Pods_Current_Mood.framework */; };
 		8498EED0247B095700794E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EECF247B095700794E8F /* AppDelegate.swift */; };
 		8498EED2247B095700794E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED1247B095700794E8F /* SceneDelegate.swift */; };
 		8498EED4247B095700794E8F /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED3247B095700794E8F /* MoodView.swift */; };
-		8498EED6247B095A00794E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8498EED5247B095A00794E8F /* Assets.xcassets */; };
 		8498EED9247B095A00794E8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8498EED8247B095A00794E8F /* Preview Assets.xcassets */; };
 		8498EEDC247B095A00794E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8498EEDA247B095A00794E8F /* LaunchScreen.storyboard */; };
 		8498EEEA247B09B500794E8F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498EEE9247B09B500794E8F /* NotificationCenter.framework */; };
@@ -23,10 +24,12 @@
 		8498EEFD247B20B100794E8F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEFB247B208200794E8F /* TodayView.swift */; };
 		84B3756C247C474E00909E1C /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
 		84B3756D247C475200909E1C /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
-		84B37570248216D000909E1C /* settings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 84B3756F248216D000909E1C /* settings.xcconfig */; };
-		84B37571248216D100909E1C /* settings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 84B3756F248216D000909E1C /* settings.xcconfig */; };
 		84B375732482184E00909E1C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B375722482184E00909E1C /* Config.swift */; };
 		84B375742482184E00909E1C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B375722482184E00909E1C /* Config.swift */; };
+		84FFD8E925A7EE5B004F15CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FFD8E825A7EE5B004F15CE /* Assets.xcassets */; };
+		84FFD8EA25A7EE5B004F15CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FFD8E825A7EE5B004F15CE /* Assets.xcassets */; };
+		84FFD8EE25A7F539004F15CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FFD8ED25A7F539004F15CE /* GoogleService-Info.plist */; };
+		84FFD8EF25A7F539004F15CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FFD8ED25A7F539004F15CE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +57,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		054421CE7A06D54263008BC1 /* Pods-Mood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood.debug.xcconfig"; path = "Target Support Files/Pods-Mood/Pods-Mood.debug.xcconfig"; sourceTree = "<group>"; };
+		455CA3C75CFEF2977A7ABBE8 /* Pods_Current_Mood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Current_Mood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		841C545825A7E2E3003AF18D /* Mood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mood.entitlements; sourceTree = "<group>"; };
+		841C545B25A7E2EE003AF18D /* Current Mood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Current Mood.entitlements"; sourceTree = "<group>"; };
 		8498EECC247B095700794E8F /* Mood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8498EECF247B095700794E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8498EED1247B095700794E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8498EED3247B095700794E8F /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
-		8498EED5247B095A00794E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8498EED8247B095A00794E8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8498EEDB247B095A00794E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8498EEDD247B095A00794E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +77,12 @@
 		84B3756B247C474E00909E1C /* MoodReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReport.swift; sourceTree = "<group>"; };
 		84B3756F248216D000909E1C /* settings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = settings.xcconfig; sourceTree = "<group>"; };
 		84B375722482184E00909E1C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		84FFD8E825A7EE5B004F15CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84FFD8ED25A7F539004F15CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B637DBFEDC621315B9ACF46 /* Pods-Current Mood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Current Mood.release.xcconfig"; path = "Target Support Files/Pods-Current Mood/Pods-Current Mood.release.xcconfig"; sourceTree = "<group>"; };
+		93040F73FBAA1150E12AD623 /* Pods_Mood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD11A64E3D2280C04B506DC /* Pods-Current Mood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Current Mood.debug.xcconfig"; path = "Target Support Files/Pods-Current Mood/Pods-Current Mood.debug.xcconfig"; sourceTree = "<group>"; };
+		E930FA5C92B613824A98F0E0 /* Pods-Mood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood.release.xcconfig"; path = "Target Support Files/Pods-Mood/Pods-Mood.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA7287D755D889D5CFC3965 /* Pods_Mood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8498EEEA247B09B500794E8F /* NotificationCenter.framework in Frameworks */,
+				3D360AB914E522D870F2B7B7 /* Pods_Current_Mood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +115,7 @@
 				8498EEEB247B09B500794E8F /* Current Mood */,
 				8498EEE8247B09B500794E8F /* Frameworks */,
 				8498EECD247B095700794E8F /* Products */,
+				B5DEF9B61E5F141E03C08B9D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,12 +131,14 @@
 		8498EECE247B095700794E8F /* Mood */ = {
 			isa = PBXGroup;
 			children = (
+				841C545825A7E2E3003AF18D /* Mood.entitlements */,
 				8498EECF247B095700794E8F /* AppDelegate.swift */,
 				8498EED1247B095700794E8F /* SceneDelegate.swift */,
+				84FFD8E825A7EE5B004F15CE /* Assets.xcassets */,
 				8498EED3247B095700794E8F /* MoodView.swift */,
-				8498EED5247B095A00794E8F /* Assets.xcassets */,
 				8498EEDA247B095A00794E8F /* LaunchScreen.storyboard */,
 				8498EEDD247B095A00794E8F /* Info.plist */,
+				84FFD8ED25A7F539004F15CE /* GoogleService-Info.plist */,
 				8498EED7247B095A00794E8F /* Preview Content */,
 				8498EEFB247B208200794E8F /* TodayView.swift */,
 				84B3756B247C474E00909E1C /* MoodReport.swift */,
@@ -141,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				8498EEE9247B09B500794E8F /* NotificationCenter.framework */,
+				455CA3C75CFEF2977A7ABBE8 /* Pods_Current_Mood.framework */,
+				93040F73FBAA1150E12AD623 /* Pods_Mood.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,11 +167,24 @@
 		8498EEEB247B09B500794E8F /* Current Mood */ = {
 			isa = PBXGroup;
 			children = (
+				841C545B25A7E2EE003AF18D /* Current Mood.entitlements */,
 				8498EEEC247B09B500794E8F /* TodayViewController.swift */,
 				8498EEEE247B09B500794E8F /* MainInterface.storyboard */,
 				8498EEF1247B09B500794E8F /* Info.plist */,
 			);
 			path = "Current Mood";
+			sourceTree = "<group>";
+		};
+		B5DEF9B61E5F141E03C08B9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BD11A64E3D2280C04B506DC /* Pods-Current Mood.debug.xcconfig */,
+				8B637DBFEDC621315B9ACF46 /* Pods-Current Mood.release.xcconfig */,
+				054421CE7A06D54263008BC1 /* Pods-Mood.debug.xcconfig */,
+				E930FA5C92B613824A98F0E0 /* Pods-Mood.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,10 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8498EEE0247B095A00794E8F /* Build configuration list for PBXNativeTarget "Mood" */;
 			buildPhases = (
+				6C43C6BA9C8290A9BFD39FB6 /* [CP] Check Pods Manifest.lock */,
 				8498EEC8247B095700794E8F /* Sources */,
 				8498EEC9247B095700794E8F /* Frameworks */,
 				8498EECA247B095700794E8F /* Resources */,
 				8498EEF5247B09B500794E8F /* Embed App Extensions */,
+				FF692B7FB6CE1BF43A98B258 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8498EEF8247B09B500794E8F /* Build configuration list for PBXNativeTarget "Current Mood" */;
 			buildPhases = (
+				DF444AAB36B246A5296E6255 /* [CP] Check Pods Manifest.lock */,
 				8498EEE3247B09B500794E8F /* Sources */,
 				8498EEE4247B09B500794E8F /* Frameworks */,
 				8498EEE5247B09B500794E8F /* Resources */,
@@ -201,7 +236,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = hbb;
 				TargetAttributes = {
 					8498EECB247B095700794E8F = {
@@ -237,9 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8498EEDC247B095A00794E8F /* LaunchScreen.storyboard in Resources */,
-				84B37570248216D000909E1C /* settings.xcconfig in Resources */,
+				84FFD8EE25A7F539004F15CE /* GoogleService-Info.plist in Resources */,
+				84FFD8E925A7EE5B004F15CE /* Assets.xcassets in Resources */,
 				8498EED9247B095A00794E8F /* Preview Assets.xcassets in Resources */,
-				8498EED6247B095A00794E8F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,12 +282,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FFD8EA25A7EE5B004F15CE /* Assets.xcassets in Resources */,
 				8498EEF0247B09B500794E8F /* MainInterface.storyboard in Resources */,
-				84B37571248216D100909E1C /* settings.xcconfig in Resources */,
+				84FFD8EF25A7F539004F15CE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C43C6BA9C8290A9BFD39FB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF444AAB36B246A5296E6255 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Current Mood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF692B7FB6CE1BF43A98B258 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mood/Pods-Mood-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mood/Pods-Mood-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mood/Pods-Mood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8498EEC8247B095700794E8F /* Sources */ = {
@@ -338,6 +438,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -399,6 +500,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -429,12 +531,14 @@
 		};
 		8498EEE1247B095A00794E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 054421CE7A06D54263008BC1 /* Pods-Mood.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mood/Mood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"mood/Preview Content\"";
-				DEVELOPMENT_TEAM = G46D8B9639;
+				DEVELOPMENT_TEAM = F69PT65JD5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = mood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -442,7 +546,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hbb.mood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeyco.mood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,12 +555,14 @@
 		};
 		8498EEE2247B095A00794E8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E930FA5C92B613824A98F0E0 /* Pods-Mood.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mood/Mood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"mood/Preview Content\"";
-				DEVELOPMENT_TEAM = G46D8B9639;
+				DEVELOPMENT_TEAM = F69PT65JD5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = mood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -464,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hbb.mood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.honey.mood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,9 +579,11 @@
 		};
 		8498EEF6247B09B500794E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BD11A64E3D2280C04B506DC /* Pods-Current Mood.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Current Mood/Current Mood.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G46D8B9639;
+				DEVELOPMENT_TEAM = F69PT65JD5;
 				INFOPLIST_FILE = "Current Mood/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -483,7 +591,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hbb.mood.mood-ext";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.honeyco.mood.mood-ext";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -493,9 +601,11 @@
 		};
 		8498EEF7247B09B500794E8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B637DBFEDC621315B9ACF46 /* Pods-Current Mood.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Current Mood/Current Mood.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G46D8B9639;
+				DEVELOPMENT_TEAM = F69PT65JD5;
 				INFOPLIST_FILE = "Current Mood/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -503,7 +613,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hbb.mood.mood-ext";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.honey.mood.mood-ext";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

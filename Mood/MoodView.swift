@@ -14,14 +14,19 @@ struct MoodView: View {
 	let okayColor = Color(red: 0.90, green: 0.50, blue: 0.13)
 	let mehColor = Color(red: 0.61, green: 0.35, blue: 0.71)
 	let notGoodColor = Color(red: 0.50, green: 0.55, blue: 0.55)
+    var userId: String
+    
+    init(userId: String) {
+        self.userId = userId
+    }
 
 	@State private var showingAlert = false
     var body: some View {
-			VStack {
-				Text("How are you feeling?")
-					.fontWeight(.bold)
-					.font(.largeTitle)
-					.padding(.bottom, 30)
+        VStack {
+            Text("How are you feeling?")
+                .fontWeight(.bold)
+                .font(.largeTitle)
+                .padding(.bottom, 30)
 
 			VStack {
 				MoodButton(showingAlert: $showingAlert, emoji: "😄", title: "Great", score: 5)
@@ -35,10 +40,10 @@ struct MoodView: View {
 				MoodButton(showingAlert: $showingAlert, emoji: "☹️", title: "Not Good", score: 1)
 					.buttonStyle(MoodButtonStyle(color: notGoodColor))
 			}
-		}
-		.alert(isPresented: $showingAlert) {
-				Alert(title: Text("An error occured. Please try again"), dismissButton: .default(Text("OK")))
-		}
+		}.frame(height: UIScreen.main.bounds.height-20, alignment: .center)
+//		.alert(isPresented: $showingAlert) {
+//				Alert(title: Text("An error occured. Please try again"), dismissButton: .default(Text("OK")))
+//		}
 	}
 }
 
@@ -53,7 +58,7 @@ struct MoodButton: View {
 		Button(action: { self.onClick() }) {
 			VStack {
 				Text(emoji)
-				.padding(.bottom, 10)
+				.padding(.bottom, 5)
 				Text(title)
 					.fontWeight(.semibold)
 			}
@@ -98,6 +103,8 @@ struct MoodButtonStyle: ButtonStyle {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MoodView()
+        Group {
+            MoodView(userId: "1234")
+        }
     }
 }
