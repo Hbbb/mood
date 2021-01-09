@@ -14,12 +14,7 @@ struct MoodView: View {
 	let okayColor = Color(red: 0.90, green: 0.50, blue: 0.13)
 	let mehColor = Color(red: 0.61, green: 0.35, blue: 0.71)
 	let notGoodColor = Color(red: 0.50, green: 0.55, blue: 0.55)
-    var userId: String
     
-    init(userId: String) {
-        self.userId = userId
-    }
-
 	@State private var showingAlert = false
     var body: some View {
         VStack {
@@ -67,21 +62,29 @@ struct MoodButton: View {
 	}
 
 	func onClick() {
-		let deviceID = UIDevice.current.identifierForVendor!.uuidString
-		let mood = MoodReport(score: self.score, deviceID: deviceID)
-		
+        guard let user = UserDefaultsController.currentUser() else {
+            self.showingAlert = true
+            return
+        }
+        
+        guard let userID = user.id else {
+            self.showingAlert = true
+            return
+        }
+        
+//		let deviceID = UIDevice.current.identifierForVendor!.uuidString
+        let mood = MoodReport(score: self.score, userID: userID)
+
 		let generator = UINotificationFeedbackGenerator()
 		generator.prepare()
 
-		mood.save() { result in
-			switch result {
-			case .success:
-				generator.notificationOccurred(.success)
-			case .failure:
-				generator.notificationOccurred(.error)
-				self.showingAlert = true
-			}
-		}
+        mood.save() { err in
+            if let _ = err {
+                generator.notificationOccurred(.error)
+            } else {
+                generator.notificationOccurred(.success)
+            }
+        }
 	}
 }
 
@@ -104,7 +107,7 @@ struct MoodButtonStyle: ButtonStyle {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MoodView(userId: "1234")
+            MoodView()
         }
     }
 }

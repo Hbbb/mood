@@ -7,46 +7,24 @@
 //
 
 import Foundation
+import Firebase
 
 struct MoodReport: Codable {
 	var score: Int
-	var deviceID: String
+	var userID: String
 
-	init(score: Int, deviceID: String) {
+	init(score: Int, userID: String) {
 		self.score = score
-		self.deviceID = deviceID
+		self.userID = userID
 	}
 
-	func save(result: @escaping (Result<String, Error>) -> Void) {
-		var request = URLRequest(url: API.endpoint)
-		request.httpMethod = "POST"
-
-		request.setValue("application/json", forHTTPHeaderField: "Accept")
-		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-		let json = try! JSONEncoder().encode(self)
-
-		request.httpBody = json
-
-		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-			if let error = error {
-				return result(.failure(error))
-			}
-
-			guard let response = response as? HTTPURLResponse else {
-				let error = NSError(domain: "decoding response", code: 0, userInfo: nil)
-				return result(.failure(error))
-			}
-
-			guard response.statusCode == 201 else {
-				let error = NSError(domain: "save mood", code: 0, userInfo: nil)
-				print(error)
-				return result(.failure(error))
-			}
-
-			return result(.success("Success"))
-		}
-
-		task.resume()
-	}
+	func save(result: @escaping (Error?) -> Void) {
+        let db = Firestore.firestore()
+        
+        db.collection("users/\(userID)/moods").addDocument(data: [
+            "userID": userID,
+            "score": score,
+            "created": FieldValue.serverTimestamp(),
+        ], completion: result)
+    }
 }

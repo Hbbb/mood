@@ -3,12 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2FA7287D755D889D5CFC3965 /* Pods_Mood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93040F73FBAA1150E12AD623 /* Pods_Mood.framework */; };
 		3D360AB914E522D870F2B7B7 /* Pods_Current_Mood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455CA3C75CFEF2977A7ABBE8 /* Pods_Current_Mood.framework */; };
+		8475F18E25A8843900388B61 /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F18D25A8843900388B61 /* UserDefaultsController.swift */; };
+		8475F18F25A8843900388B61 /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F18D25A8843900388B61 /* UserDefaultsController.swift */; };
+		8475F19325A8846E00388B61 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19225A8846E00388B61 /* User.swift */; };
+		8475F19425A8846E00388B61 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19225A8846E00388B61 /* User.swift */; };
+		8475F19825A885D300388B61 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19725A885D300388B61 /* DictionaryConvertible.swift */; };
+		8475F19925A885D300388B61 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19725A885D300388B61 /* DictionaryConvertible.swift */; };
 		8498EED0247B095700794E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EECF247B095700794E8F /* AppDelegate.swift */; };
 		8498EED2247B095700794E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED1247B095700794E8F /* SceneDelegate.swift */; };
 		8498EED4247B095700794E8F /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED3247B095700794E8F /* MoodView.swift */; };
@@ -61,6 +67,9 @@
 		455CA3C75CFEF2977A7ABBE8 /* Pods_Current_Mood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Current_Mood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841C545825A7E2E3003AF18D /* Mood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mood.entitlements; sourceTree = "<group>"; };
 		841C545B25A7E2EE003AF18D /* Current Mood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Current Mood.entitlements"; sourceTree = "<group>"; };
+		8475F18D25A8843900388B61 /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
+		8475F19225A8846E00388B61 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8475F19725A885D300388B61 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
 		8498EECC247B095700794E8F /* Mood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8498EECF247B095700794E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8498EED1247B095700794E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +151,9 @@
 				8498EED7247B095A00794E8F /* Preview Content */,
 				8498EEFB247B208200794E8F /* TodayView.swift */,
 				84B3756B247C474E00909E1C /* MoodReport.swift */,
+				8475F18D25A8843900388B61 /* UserDefaultsController.swift */,
+				8475F19725A885D300388B61 /* DictionaryConvertible.swift */,
+				8475F19225A8846E00388B61 /* User.swift */,
 			);
 			path = Mood;
 			sourceTree = "<group>";
@@ -183,7 +195,6 @@
 				054421CE7A06D54263008BC1 /* Pods-Mood.debug.xcconfig */,
 				E930FA5C92B613824A98F0E0 /* Pods-Mood.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -360,9 +371,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8498EEF9247B1FE300794E8F /* TodayViewController.swift in Sources */,
+				8475F19825A885D300388B61 /* DictionaryConvertible.swift in Sources */,
 				8498EEFC247B208200794E8F /* TodayView.swift in Sources */,
+				8475F18E25A8843900388B61 /* UserDefaultsController.swift in Sources */,
 				84B375732482184E00909E1C /* Config.swift in Sources */,
 				84B3756C247C474E00909E1C /* MoodReport.swift in Sources */,
+				8475F19325A8846E00388B61 /* User.swift in Sources */,
 				8498EED0247B095700794E8F /* AppDelegate.swift in Sources */,
 				8498EED2247B095700794E8F /* SceneDelegate.swift in Sources */,
 				8498EED4247B095700794E8F /* MoodView.swift in Sources */,
@@ -374,10 +388,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8498EEFD247B20B100794E8F /* TodayView.swift in Sources */,
+				8475F19925A885D300388B61 /* DictionaryConvertible.swift in Sources */,
 				84B375742482184E00909E1C /* Config.swift in Sources */,
 				8498EEFA247B203000794E8F /* MoodView.swift in Sources */,
 				84B3756D247C475200909E1C /* MoodReport.swift in Sources */,
+				8475F18F25A8843900388B61 /* UserDefaultsController.swift in Sources */,
 				8498EEED247B09B500794E8F /* TodayViewController.swift in Sources */,
+				8475F19425A8846E00388B61 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +563,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.honeyco.mood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.honey.mood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -591,7 +608,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.honeyco.mood.mood-ext";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.honey.mood.mood-ext";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

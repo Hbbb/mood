@@ -8,6 +8,7 @@ target 'Current Mood' do
   # Pods for Current Mood
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift', '7.3.0-beta'
 end
 
 target 'Mood' do
@@ -17,4 +18,5 @@ target 'Mood' do
   # Pods for Mood
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift', '7.3.0-beta'
 end

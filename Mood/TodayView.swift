@@ -34,19 +34,29 @@ struct EmojiButton: View {
 	}
 
 	func onClick() {
-		let deviceID = UIDevice.current.identifierForVendor!.uuidString
-		let mood = MoodReport(score: self.score, deviceID: deviceID)
+        guard let user = UserDefaultsController.currentUser() else {
+//            self.showingAlert = true
+            return
+        }
+        
+        guard let userID = user.id else {
+//            self.showingAlert = true
+            return
+        }
+        
+        let mood = MoodReport(score: self.score, userID: userID)
 		let generator = UINotificationFeedbackGenerator()
 		generator.prepare()
 
-		mood.save() { result in
-			switch result {
-			case .success:
-				generator.notificationOccurred(.success)
-			case .failure:
-				generator.notificationOccurred(.error)
-			}
-		}
+        mood.save() { err in
+            if let err = err {
+                print(err)
+                generator.notificationOccurred(.error)
+            } else {
+                print("it worked!")
+                generator.notificationOccurred(.success)
+            }
+        }
 	}
 }
 
