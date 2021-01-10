@@ -20,3 +20,13 @@ target 'Mood' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift', '7.3.0-beta'
 end
+
+target 'Mood WidgetExtension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Mood
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift', '7.3.0-beta'
+end

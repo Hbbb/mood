@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct TodayView: View {
     var body: some View {

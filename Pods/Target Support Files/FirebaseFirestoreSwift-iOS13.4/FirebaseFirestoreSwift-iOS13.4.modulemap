@@ -1,0 +1,6 @@
+framework module FirebaseFirestoreSwift {
+  umbrella header "FirebaseFirestoreSwift-iOS13.4-umbrella.h"
+
+  export *
+  module * { export * }
+}

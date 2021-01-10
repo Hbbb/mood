@@ -10,21 +10,36 @@ import Foundation
 import Firebase
 
 struct MoodReport: Codable {
-	var score: Int
-	var userID: String
+	let score: Int?
+	let userID: String?
+    let created: Date?
 
 	init(score: Int, userID: String) {
 		self.score = score
 		self.userID = userID
+        self.created = nil
 	}
 
+    enum CodingKeys: String, CodingKey {
+        case score
+        case userID
+        case created
+    }
+
 	func save(result: @escaping (Error?) -> Void) {
-        let db = Firestore.firestore()
-        
-        db.collection("users/\(userID)/moods").addDocument(data: [
-            "userID": userID,
-            "score": score,
+        collection().addDocument(data: [
+            "userID": userID!,
+            "score": score!,
             "created": FieldValue.serverTimestamp(),
         ], completion: result)
+    }
+    
+    func moods(result: @escaping (Optional<QuerySnapshot>, Optional<Error>) -> ()) {
+        collection().getDocuments(completion: result)
+    }
+    
+    func collection() -> CollectionReference {
+        let db = Firestore.firestore()
+        return db.collection("users/\(userID!)/moods")
     }
 }
