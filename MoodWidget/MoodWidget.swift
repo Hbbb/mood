@@ -33,25 +33,19 @@ struct Provider: TimelineProvider {
             let dates = moods.map { $0.created!.timeIntervalSince1970 }
             let minDate = dates.min()!
             let maxDate = dates.max()!
-            
-            let axisRange = Double(20)...Double(40)
-            let dateRange = minDate...maxDate
-            
+                        
             let minX = 20
             let maxX = 400
 
             let dateDiff = maxDate - minDate
             let axisDiff = maxX - minX
 
-//            let scale = Float(axisDiff) / Float(dateDiff + minDate)
+            let scale = Float(axisDiff) / Float(dateDiff)
 
             let points: [CGPoint] = moods.map { mood in
-                let x = (mood.created?.timeIntervalSince1970.converting(from: dateRange, to: axisRange))!
-                
-//                let x = Float(mood.created!.timeIntervalSince1970 - minDate) * scale
+                let x = Float(mood.created!.timeIntervalSince1970 - minDate) * scale + Float(minX)
                 return CGPoint(x: Double(x), y: 50.0)
             }
-
 
             let timeline = Timeline(entries: [WidgetContent(points: points, date: Date())], policy: .atEnd)
             completion(timeline)
