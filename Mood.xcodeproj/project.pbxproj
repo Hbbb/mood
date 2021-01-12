@@ -21,6 +21,9 @@
 		8412D8E625AA170A00FD3EC0 /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
 		8412D91425AA6E5F00FD3EC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FFD8ED25A7F539004F15CE /* GoogleService-Info.plist */; };
 		8412D92125AA792700FD3EC0 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412D92025AA792700FD3EC0 /* EntryView.swift */; };
+		843E624825AD280C00ADAF8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FFD8ED25A7F539004F15CE /* GoogleService-Info.plist */; };
+		843E624D25AD7F1900ADAF8B /* Interger+ScaleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E624C25AD7F1800ADAF8B /* Interger+ScaleRange.swift */; };
+		843E625125AD7F2A00ADAF8B /* Interger+ScaleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E624C25AD7F1800ADAF8B /* Interger+ScaleRange.swift */; };
 		8455F01D25AAB7E50037B38B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8412D8C325AA11D100FD3EC0 /* WidgetKit.framework */; };
 		8455F01E25AAB7E50037B38B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8412D8C525AA11D100FD3EC0 /* SwiftUI.framework */; };
 		8455F02125AAB7E50037B38B /* MoodWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455F02025AAB7E50037B38B /* MoodWidget.swift */; };
@@ -93,6 +96,7 @@
 		8412D8CC25AA11D300FD3EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8412D92025AA792700FD3EC0 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		841C545825A7E2E3003AF18D /* Mood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mood.entitlements; sourceTree = "<group>"; };
+		843E624C25AD7F1800ADAF8B /* Interger+ScaleRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interger+ScaleRange.swift"; sourceTree = "<group>"; };
 		8455F01C25AAB7E50037B38B /* MoodWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MoodWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8455F02025AAB7E50037B38B /* MoodWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodWidget.swift; sourceTree = "<group>"; };
 		8455F02225AAB7E70037B38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				8455F02225AAB7E70037B38B /* Assets.xcassets */,
 				8455F02425AAB7E70037B38B /* Info.plist */,
 				847EEB5025AB7A4B003FFE1E /* MoodReportLoader.swift */,
+				843E624C25AD7F1800ADAF8B /* Interger+ScaleRange.swift */,
 			);
 			path = MoodWidget;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8455F02325AAB7E70037B38B /* Assets.xcassets in Resources */,
+				843E624825AD280C00ADAF8B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +509,7 @@
 				847EEB9525AB7B97003FFE1E /* MoodReport.swift in Sources */,
 				847EEBA425AD1C4E003FFE1E /* DictionaryConvertible.swift in Sources */,
 				847EEB9925AD1C12003FFE1E /* User.swift in Sources */,
+				843E624D25AD7F1900ADAF8B /* Interger+ScaleRange.swift in Sources */,
 				847EEB5125AB7A4B003FFE1E /* MoodReportLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +524,7 @@
 				84B375732482184E00909E1C /* Config.swift in Sources */,
 				84B3756C247C474E00909E1C /* MoodReport.swift in Sources */,
 				8475F19325A8846E00388B61 /* User.swift in Sources */,
+				843E625125AD7F2A00ADAF8B /* Interger+ScaleRange.swift in Sources */,
 				8498EED0247B095700794E8F /* AppDelegate.swift in Sources */,
 				8498EED2247B095700794E8F /* SceneDelegate.swift in Sources */,
 				8498EED4247B095700794E8F /* MoodView.swift in Sources */,

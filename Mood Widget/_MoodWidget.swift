@@ -26,10 +26,7 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-
         let entries: [WidgetContent] = []
-
-        completion(Timeline(entries: entries, policy: .atEnd))
         
          getMoodEntries() { moods in
              let minX = 20

@@ -12,7 +12,7 @@ import Firebase
 struct MoodReport: Codable {
 	let score: Int?
 	let userID: String?
-    let created: Date?
+    var created: Date?
 
 	init(score: Int, userID: String) {
 		self.score = score
