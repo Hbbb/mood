@@ -14,9 +14,9 @@ struct EntryView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Mood Over Time")
-                .fontWeight(.bold)
-                .font(.title2)
-                .padding([.leading, .top], 15)
+//                .fontWeight(.bold)
+//                .font(.title2)
+//                .padding([.leading, .top], 15)
             
 //            if !model.points.isEmpty {
 //                Path { path in

@@ -7,23 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0036FA492EADD6DBB7310139 /* Pods_MoodWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23026D90F794C579FFCE131 /* Pods_MoodWidgetExtension.framework */; };
 		2FA7287D755D889D5CFC3965 /* Pods_Mood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93040F73FBAA1150E12AD623 /* Pods_Mood.framework */; };
 		34385CEEB239AFC5CB2798C1 /* Pods_Mood_WidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5104E3DD2EF76D707BE7A3DF /* Pods_Mood_WidgetExtension.framework */; };
 		8412D8C425AA11D100FD3EC0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8412D8C325AA11D100FD3EC0 /* WidgetKit.framework */; };
 		8412D8C625AA11D100FD3EC0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8412D8C525AA11D100FD3EC0 /* SwiftUI.framework */; };
-		8412D8C925AA11D100FD3EC0 /* MoodWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412D8C825AA11D100FD3EC0 /* MoodWidget.swift */; };
+		8412D8C925AA11D100FD3EC0 /* _MoodWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412D8C825AA11D100FD3EC0 /* _MoodWidget.swift */; };
 		8412D8CB25AA11D300FD3EC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8412D8CA25AA11D300FD3EC0 /* Assets.xcassets */; };
 		8412D8CF25AA11D300FD3EC0 /* Mood WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8412D8C225AA11D100FD3EC0 /* Mood WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8412D8D625AA161D00FD3EC0 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEFB247B208200794E8F /* TodayView.swift */; };
 		8412D8DA25AA16DA00FD3EC0 /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F18D25A8843900388B61 /* UserDefaultsController.swift */; };
-		8412D8DE25AA16F300FD3EC0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19225A8846E00388B61 /* User.swift */; };
 		8412D8E225AA170400FD3EC0 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19725A885D300388B61 /* DictionaryConvertible.swift */; };
 		8412D8E625AA170A00FD3EC0 /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
 		8412D91425AA6E5F00FD3EC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FFD8ED25A7F539004F15CE /* GoogleService-Info.plist */; };
 		8412D92125AA792700FD3EC0 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412D92025AA792700FD3EC0 /* EntryView.swift */; };
+		8455F01D25AAB7E50037B38B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8412D8C325AA11D100FD3EC0 /* WidgetKit.framework */; };
+		8455F01E25AAB7E50037B38B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8412D8C525AA11D100FD3EC0 /* SwiftUI.framework */; };
+		8455F02125AAB7E50037B38B /* MoodWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455F02025AAB7E50037B38B /* MoodWidget.swift */; };
+		8455F02325AAB7E70037B38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8455F02225AAB7E70037B38B /* Assets.xcassets */; };
+		8455F02725AAB7E70037B38B /* MoodWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8455F01C25AAB7E50037B38B /* MoodWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8475F18E25A8843900388B61 /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F18D25A8843900388B61 /* UserDefaultsController.swift */; };
 		8475F19325A8846E00388B61 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19225A8846E00388B61 /* User.swift */; };
 		8475F19825A885D300388B61 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19725A885D300388B61 /* DictionaryConvertible.swift */; };
+		847EEB5125AB7A4B003FFE1E /* MoodReportLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EEB5025AB7A4B003FFE1E /* MoodReportLoader.swift */; };
+		847EEB9125AB7B86003FFE1E /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F18D25A8843900388B61 /* UserDefaultsController.swift */; };
+		847EEB9525AB7B97003FFE1E /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
+		847EEB9925AD1C12003FFE1E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19225A8846E00388B61 /* User.swift */; };
+		847EEBA025AD1C47003FFE1E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19225A8846E00388B61 /* User.swift */; };
+		847EEBA425AD1C4E003FFE1E /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19725A885D300388B61 /* DictionaryConvertible.swift */; };
 		8498EED0247B095700794E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EECF247B095700794E8F /* AppDelegate.swift */; };
 		8498EED2247B095700794E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED1247B095700794E8F /* SceneDelegate.swift */; };
 		8498EED4247B095700794E8F /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED3247B095700794E8F /* MoodView.swift */; };
@@ -44,6 +55,13 @@
 			remoteGlobalIDString = 8412D8C125AA11D100FD3EC0;
 			remoteInfo = "Mood WidgetExtension";
 		};
+		8455F02525AAB7E70037B38B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8498EEC4247B095700794E8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8455F01B25AAB7E50037B38B;
+			remoteInfo = MoodWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +72,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				8412D8CF25AA11D300FD3EC0 /* Mood WidgetExtension.appex in Embed App Extensions */,
+				8455F02725AAB7E70037B38B /* MoodWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,20 +81,26 @@
 
 /* Begin PBXFileReference section */
 		054421CE7A06D54263008BC1 /* Pods-Mood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood.debug.xcconfig"; path = "Target Support Files/Pods-Mood/Pods-Mood.debug.xcconfig"; sourceTree = "<group>"; };
+		0A8EE263C07FD4EB8A262CFC /* Pods-MoodWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-MoodWidgetExtension/Pods-MoodWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		1C33FD93D1D372E6E03C00F6 /* Pods-Mood WidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood WidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-Mood WidgetExtension/Pods-Mood WidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		455CA3C75CFEF2977A7ABBE8 /* Pods_Current_Mood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Current_Mood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5104E3DD2EF76D707BE7A3DF /* Pods_Mood_WidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_WidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8412D8C225AA11D100FD3EC0 /* Mood WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mood WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8412D8C325AA11D100FD3EC0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		8412D8C525AA11D100FD3EC0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		8412D8C825AA11D100FD3EC0 /* MoodWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodWidget.swift; sourceTree = "<group>"; };
+		8412D8C825AA11D100FD3EC0 /* _MoodWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _MoodWidget.swift; sourceTree = "<group>"; };
 		8412D8CA25AA11D300FD3EC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8412D8CC25AA11D300FD3EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8412D92025AA792700FD3EC0 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		841C545825A7E2E3003AF18D /* Mood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mood.entitlements; sourceTree = "<group>"; };
+		8455F01C25AAB7E50037B38B /* MoodWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MoodWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8455F02025AAB7E50037B38B /* MoodWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodWidget.swift; sourceTree = "<group>"; };
+		8455F02225AAB7E70037B38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8455F02425AAB7E70037B38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8475F18D25A8843900388B61 /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
 		8475F19225A8846E00388B61 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8475F19725A885D300388B61 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
+		847EEB5025AB7A4B003FFE1E /* MoodReportLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReportLoader.swift; sourceTree = "<group>"; };
 		8498EECC247B095700794E8F /* Mood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8498EECF247B095700794E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8498EED1247B095700794E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +118,8 @@
 		8B637DBFEDC621315B9ACF46 /* Pods-Current Mood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Current Mood.release.xcconfig"; path = "Target Support Files/Pods-Current Mood/Pods-Current Mood.release.xcconfig"; sourceTree = "<group>"; };
 		93040F73FBAA1150E12AD623 /* Pods_Mood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD11A64E3D2280C04B506DC /* Pods-Current Mood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Current Mood.debug.xcconfig"; path = "Target Support Files/Pods-Current Mood/Pods-Current Mood.debug.xcconfig"; sourceTree = "<group>"; };
+		A23026D90F794C579FFCE131 /* Pods_MoodWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4BF9D2A866045A0452754F8 /* Pods-MoodWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-MoodWidgetExtension/Pods-MoodWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		C60161D4B0655FE0E1E6C420 /* Pods-Mood WidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood WidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-Mood WidgetExtension/Pods-Mood WidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		E930FA5C92B613824A98F0E0 /* Pods-Mood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood.release.xcconfig"; path = "Target Support Files/Pods-Mood/Pods-Mood.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +132,16 @@
 				8412D8C625AA11D100FD3EC0 /* SwiftUI.framework in Frameworks */,
 				8412D8C425AA11D100FD3EC0 /* WidgetKit.framework in Frameworks */,
 				34385CEEB239AFC5CB2798C1 /* Pods_Mood_WidgetExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8455F01925AAB7E50037B38B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8455F01E25AAB7E50037B38B /* SwiftUI.framework in Frameworks */,
+				8455F01D25AAB7E50037B38B /* WidgetKit.framework in Frameworks */,
+				0036FA492EADD6DBB7310139 /* Pods_MoodWidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,12 +159,23 @@
 		8412D8C725AA11D100FD3EC0 /* Mood Widget */ = {
 			isa = PBXGroup;
 			children = (
-				8412D8C825AA11D100FD3EC0 /* MoodWidget.swift */,
+				8412D8C825AA11D100FD3EC0 /* _MoodWidget.swift */,
 				8412D92025AA792700FD3EC0 /* EntryView.swift */,
 				8412D8CA25AA11D300FD3EC0 /* Assets.xcassets */,
 				8412D8CC25AA11D300FD3EC0 /* Info.plist */,
 			);
 			path = "Mood Widget";
+			sourceTree = "<group>";
+		};
+		8455F01F25AAB7E50037B38B /* MoodWidget */ = {
+			isa = PBXGroup;
+			children = (
+				8455F02025AAB7E50037B38B /* MoodWidget.swift */,
+				8455F02225AAB7E70037B38B /* Assets.xcassets */,
+				8455F02425AAB7E70037B38B /* Info.plist */,
+				847EEB5025AB7A4B003FFE1E /* MoodReportLoader.swift */,
+			);
+			path = MoodWidget;
 			sourceTree = "<group>";
 		};
 		8498EEC3247B095700794E8F = {
@@ -137,6 +185,7 @@
 				84B375722482184E00909E1C /* Config.swift */,
 				8498EECE247B095700794E8F /* Mood */,
 				8412D8C725AA11D100FD3EC0 /* Mood Widget */,
+				8455F01F25AAB7E50037B38B /* MoodWidget */,
 				8498EEE8247B09B500794E8F /* Frameworks */,
 				8498EECD247B095700794E8F /* Products */,
 				B5DEF9B61E5F141E03C08B9D /* Pods */,
@@ -148,6 +197,7 @@
 			children = (
 				8498EECC247B095700794E8F /* Mood.app */,
 				8412D8C225AA11D100FD3EC0 /* Mood WidgetExtension.appex */,
+				8455F01C25AAB7E50037B38B /* MoodWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +240,7 @@
 				8412D8C325AA11D100FD3EC0 /* WidgetKit.framework */,
 				8412D8C525AA11D100FD3EC0 /* SwiftUI.framework */,
 				5104E3DD2EF76D707BE7A3DF /* Pods_Mood_WidgetExtension.framework */,
+				A23026D90F794C579FFCE131 /* Pods_MoodWidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,6 +254,8 @@
 				E930FA5C92B613824A98F0E0 /* Pods-Mood.release.xcconfig */,
 				C60161D4B0655FE0E1E6C420 /* Pods-Mood WidgetExtension.debug.xcconfig */,
 				1C33FD93D1D372E6E03C00F6 /* Pods-Mood WidgetExtension.release.xcconfig */,
+				B4BF9D2A866045A0452754F8 /* Pods-MoodWidgetExtension.debug.xcconfig */,
+				0A8EE263C07FD4EB8A262CFC /* Pods-MoodWidgetExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -228,6 +281,24 @@
 			productReference = 8412D8C225AA11D100FD3EC0 /* Mood WidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		8455F01B25AAB7E50037B38B /* MoodWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8455F02A25AAB7E70037B38B /* Build configuration list for PBXNativeTarget "MoodWidgetExtension" */;
+			buildPhases = (
+				1D1252A58260AC186F5D3150 /* [CP] Check Pods Manifest.lock */,
+				8455F01825AAB7E50037B38B /* Sources */,
+				8455F01925AAB7E50037B38B /* Frameworks */,
+				8455F01A25AAB7E50037B38B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoodWidgetExtension;
+			productName = MoodWidgetExtension;
+			productReference = 8455F01C25AAB7E50037B38B /* MoodWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8498EECB247B095700794E8F /* Mood */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8498EEE0247B095A00794E8F /* Build configuration list for PBXNativeTarget "Mood" */;
@@ -243,6 +314,7 @@
 			);
 			dependencies = (
 				8412D8CE25AA11D300FD3EC0 /* PBXTargetDependency */,
+				8455F02625AAB7E70037B38B /* PBXTargetDependency */,
 			);
 			name = Mood;
 			productName = mood;
@@ -260,6 +332,9 @@
 				ORGANIZATIONNAME = hbb;
 				TargetAttributes = {
 					8412D8C125AA11D100FD3EC0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					8455F01B25AAB7E50037B38B = {
 						CreatedOnToolsVersion = 12.3;
 					};
 					8498EECB247B095700794E8F = {
@@ -282,6 +357,7 @@
 			targets = (
 				8498EECB247B095700794E8F /* Mood */,
 				8412D8C125AA11D100FD3EC0 /* Mood WidgetExtension */,
+				8455F01B25AAB7E50037B38B /* MoodWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -293,6 +369,14 @@
 			files = (
 				8412D8CB25AA11D300FD3EC0 /* Assets.xcassets in Resources */,
 				8412D91425AA6E5F00FD3EC0 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8455F01A25AAB7E50037B38B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8455F02325AAB7E70037B38B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +394,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1D1252A58260AC186F5D3150 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoodWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6C43C6BA9C8290A9BFD39FB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,13 +484,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8412D8DE25AA16F300FD3EC0 /* User.swift in Sources */,
 				8412D8E225AA170400FD3EC0 /* DictionaryConvertible.swift in Sources */,
 				8412D8E625AA170A00FD3EC0 /* MoodReport.swift in Sources */,
 				8412D8D625AA161D00FD3EC0 /* TodayView.swift in Sources */,
 				8412D92125AA792700FD3EC0 /* EntryView.swift in Sources */,
 				8412D8DA25AA16DA00FD3EC0 /* UserDefaultsController.swift in Sources */,
-				8412D8C925AA11D100FD3EC0 /* MoodWidget.swift in Sources */,
+				8412D8C925AA11D100FD3EC0 /* _MoodWidget.swift in Sources */,
+				847EEBA025AD1C47003FFE1E /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8455F01825AAB7E50037B38B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8455F02125AAB7E50037B38B /* MoodWidget.swift in Sources */,
+				847EEB9125AB7B86003FFE1E /* UserDefaultsController.swift in Sources */,
+				847EEB9525AB7B97003FFE1E /* MoodReport.swift in Sources */,
+				847EEBA425AD1C4E003FFE1E /* DictionaryConvertible.swift in Sources */,
+				847EEB9925AD1C12003FFE1E /* User.swift in Sources */,
+				847EEB5125AB7A4B003FFE1E /* MoodReportLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +530,11 @@
 			isa = PBXTargetDependency;
 			target = 8412D8C125AA11D100FD3EC0 /* Mood WidgetExtension */;
 			targetProxy = 8412D8CD25AA11D300FD3EC0 /* PBXContainerItemProxy */;
+		};
+		8455F02625AAB7E70037B38B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8455F01B25AAB7E50037B38B /* MoodWidgetExtension */;
+			targetProxy = 8455F02525AAB7E70037B38B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -465,6 +589,52 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.honey.mood.Mood-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8455F02825AAB7E70037B38B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4BF9D2A866045A0452754F8 /* Pods-MoodWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F69PT65JD5;
+				INFOPLIST_FILE = MoodWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.honey.mood.MoodWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8455F02925AAB7E70037B38B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A8EE263C07FD4EB8A262CFC /* Pods-MoodWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F69PT65JD5;
+				INFOPLIST_FILE = MoodWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.honey.mood.MoodWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -646,6 +816,15 @@
 			buildConfigurations = (
 				8412D8D025AA11D300FD3EC0 /* Debug */,
 				8412D8D125AA11D300FD3EC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8455F02A25AAB7E70037B38B /* Build configuration list for PBXNativeTarget "MoodWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8455F02825AAB7E70037B38B /* Debug */,
+				8455F02925AAB7E70037B38B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
