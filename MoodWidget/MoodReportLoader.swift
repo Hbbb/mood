@@ -12,45 +12,49 @@ import FirebaseFirestoreSwift
 
 struct MoodReportLoader {
     static func getMoodEntries(completion: @escaping ([MoodReport]) -> ()) {
+        var mood = MoodReport(score: 1, userID: "test")
+        mood.created = Date()
+        
         FirebaseApp.configure()
-
         let db = Firestore.firestore()
-        guard let user = UserDefaultsController.currentUser() else {
-            return
-        }
         
+        let user = User()
+        user.id = "884E5129-6073-4597-92E0-52C6ECE5139C"
+//        guard let user = UserDefaultsController.currentUser() else {
+//            fatalError()
+//            return
+//        }
+
         guard let userID = user.id else {
-            return
+            fatalError()
         }
-        
+
         let coll = db.collection("users/\(userID)/moods")
         var moods: [MoodReport] = []
         
         coll.getDocuments() { query, err in
             if let err = err {
-                print(err)
-                return
+                fatalError("\(err)")
             }
             
-            if let query = query {
-                for doc in query.documents {
-                    let result = Result {
-                      try doc.data(as: MoodReport.self)
-                    }
+            guard let query = query else { fatalError("query wasn't what we thought it was") }
 
-                    switch result {
-                    case .success(let mood):
-                        if let mood = mood {
-                            moods.append(mood)
-                        } else {
-                            print("Document does not exist")
-                        }
-                    case .failure(let error):
-                        print("Error decoding city: \(error)")
+            for doc in query.documents {
+                let result = Result {
+                  try doc.data(as: MoodReport.self)
+                }
+
+                switch result {
+                case .success(let mood):
+                    if let mood = mood {
+                        moods.append(mood)
+                    } else {
+                        fatalError("Document does not exist")
                     }
+                case .failure(let error):
+                    fatalError("\(error)")
                 }
             }
-    
             completion(moods)
         }
     }

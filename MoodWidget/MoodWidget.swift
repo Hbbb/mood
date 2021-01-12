@@ -9,10 +9,6 @@
 import WidgetKit
 import SwiftUI
 
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseFirestoreSwift
-
 struct WidgetContent: TimelineEntry {
     let points: [CGPoint]
     let date: Date
@@ -29,7 +25,7 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        getMoodEntries() { moods in
+        MoodReportLoader.getMoodEntries() { moods in
             let dates = moods.map { $0.created!.timeIntervalSince1970 }
             let minDate = dates.min()!
             let maxDate = dates.max()!
@@ -60,54 +56,6 @@ struct Provider: TimelineProvider {
 
             let timeline = Timeline(entries: [WidgetContent(points: points, date: Date())], policy: .atEnd)
             completion(timeline)
-        }
-    }
-    
-    func getMoodEntries(completion: @escaping ([MoodReport]) -> ()) {
-        var mood = MoodReport(score: 1, userID: "test")
-        mood.created = Date()
-        
-        FirebaseApp.configure()
-        let db = Firestore.firestore()
-        
-        let user = User()
-        user.id = "884E5129-6073-4597-92E0-52C6ECE5139C"
-//        guard let user = UserDefaultsController.currentUser() else {
-//            fatalError()
-//            return
-//        }
-
-        guard let userID = user.id else {
-            fatalError()
-        }
-
-        let coll = db.collection("users/\(userID)/moods")
-        var moods: [MoodReport] = []
-        
-        coll.getDocuments() { query, err in
-            if let err = err {
-                fatalError("\(err)")
-            }
-            
-            guard let query = query else { fatalError("query wasn't what we thought it was") }
-
-            for doc in query.documents {
-                let result = Result {
-                  try doc.data(as: MoodReport.self)
-                }
-
-                switch result {
-                case .success(let mood):
-                    if let mood = mood {
-                        moods.append(mood)
-                    } else {
-                        fatalError("Document does not exist")
-                    }
-                case .failure(let error):
-                    fatalError("\(error)")
-                }
-            }
-            completion(moods)
         }
     }
 }
