@@ -26,7 +26,15 @@ struct Provider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         MoodReportLoader.getMoodEntries() { moods in
+            if moods.isEmpty {
+                completion(
+                    Timeline(entries: [WidgetContent(points: [], date: Date())], policy: .atEnd)
+                )
+                return
+            }
+            
             let dates = moods.map { $0.created!.timeIntervalSince1970 }
+            
             let minDate = dates.min()!
             let maxDate = dates.max()!
                         
@@ -68,9 +76,11 @@ struct EntryView: View {
             Text("Mood Over Time")
                 .fontWeight(.bold)
                 .font(.title2)
-                .padding([.leading, .top], 15)
-            
-            if !model.points.isEmpty {
+//                .padding([.leading, .top], 15)
+
+            if model.points.isEmpty {
+                Text("Start logging your mood to see a graph")
+            } else {
                 Path { path in
                     path.move(to: model.points[0])
                     for point in model.points[1...] {

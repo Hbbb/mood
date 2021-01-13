@@ -62,10 +62,7 @@ struct MoodButton: View {
 	}
 
 	func onClick() {
-        guard let user = UserDefaultsController.currentUser() else {
-            self.showingAlert = true
-            return
-        }
+        let user = UserDefaultsController.currentUser()
         
         guard let userID = user.id else {
             self.showingAlert = true

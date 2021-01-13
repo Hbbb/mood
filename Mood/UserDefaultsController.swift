@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class UserDefaultsController {
     private static let CurrentUserKey = "current_user"
     private static let SuiteName = "com.honey.mood"
     
-    static func currentUser() -> User? {
+    static func currentUser() -> User {
         if let dictionary = UserDefaults(suiteName: self.SuiteName)!.object(forKey: self.CurrentUserKey) as? [String: Any] {
             do {
                 return try User(with: dictionary)
@@ -22,7 +25,24 @@ class UserDefaultsController {
             }
         }
         
-        return nil
+        let user = User()
+        user.id = UUID().uuidString
+        
+        let db = Firestore.firestore()
+        let userDoc = db.collection("users").document(user.id!)
+        
+        do {
+            let data = try user.toDictionary()
+            userDoc.setData(data) { err in
+                if let err = err {
+                    fatalError("Error writing document: \(err)")
+                }
+            }
+        } catch {
+            fatalError("current_user failed to save")
+        }
+    
+        return user
     }
     
     static func setCurrentUser(_ user: User?) {
@@ -31,8 +51,6 @@ class UserDefaultsController {
             UserDefaults(suiteName: self.SuiteName)!.set(dictionary, forKey: self.CurrentUserKey)
         }
         catch {
-            // TODO: Handle this better
-            
             fatalError("failed to set current user")
         }
     }
