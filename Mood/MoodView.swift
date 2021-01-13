@@ -24,27 +24,22 @@ struct MoodView: View {
                 .padding(.bottom, 30)
 
 			VStack {
-				MoodButton(showingAlert: $showingAlert, emoji: "😄", title: "Great", score: 5)
+				MoodButton(emoji: "😄", title: "Great", score: 5)
 					.buttonStyle(MoodButtonStyle(color: greatColor))
-				MoodButton(showingAlert: $showingAlert, emoji: "🙂", title: "Pretty Good", score: 4)
+				MoodButton(emoji: "🙂", title: "Pretty Good", score: 4)
 					.buttonStyle(MoodButtonStyle(color: goodColor))
-				MoodButton(showingAlert: $showingAlert, emoji: "😐", title: "Okay", score: 3)
+				MoodButton(emoji: "😐", title: "Okay", score: 3)
 					.buttonStyle(MoodButtonStyle(color: okayColor))
-				MoodButton(showingAlert: $showingAlert, emoji: "😕", title: "Meh", score: 2)
+				MoodButton(emoji: "😕", title: "Meh", score: 2)
 					.buttonStyle(MoodButtonStyle(color: mehColor))
-				MoodButton(showingAlert: $showingAlert, emoji: "☹️", title: "Not Good", score: 1)
+				MoodButton(emoji: "☹️", title: "Not Good", score: 1)
 					.buttonStyle(MoodButtonStyle(color: notGoodColor))
 			}
 		}.frame(height: UIScreen.main.bounds.height-20, alignment: .center)
-//		.alert(isPresented: $showingAlert) {
-//				Alert(title: Text("An error occured. Please try again"), dismissButton: .default(Text("OK")))
-//		}
 	}
 }
 
 struct MoodButton: View {
-	@Binding var showingAlert: Bool
-
 	var emoji: String
 	var title: String
 	var score: Int
@@ -65,11 +60,9 @@ struct MoodButton: View {
         let user = UserDefaultsController.currentUser()
         
         guard let userID = user.id else {
-            self.showingAlert = true
             return
         }
         
-//		let deviceID = UIDevice.current.identifierForVendor!.uuidString
         let mood = MoodReport(score: self.score, userID: userID)
 
 		let generator = UINotificationFeedbackGenerator()
