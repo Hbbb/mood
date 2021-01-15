@@ -76,7 +76,6 @@ struct EntryView: View {
             Text("Mood Over Time")
                 .fontWeight(.bold)
                 .font(.title2)
-//                .padding([.leading, .top], 15)
 
             if model.points.isEmpty {
                 Text("Start logging your mood to see a graph")

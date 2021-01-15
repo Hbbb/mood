@@ -19,7 +19,6 @@ struct MoodReportLoader {
         let db = Firestore.firestore()
         
         let user = UserDefaultsController.currentUser()
-//        user.id = "884E5129-6073-4597-92E0-52C6ECE5139C"
 
         guard let userID = user.id else {
             fatalError()
