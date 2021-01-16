@@ -1,6 +1,0 @@
-framework module nanopb {
-  umbrella header "nanopb-iOS14.2-umbrella.h"
-
-  export *
-  module * { export * }
-}

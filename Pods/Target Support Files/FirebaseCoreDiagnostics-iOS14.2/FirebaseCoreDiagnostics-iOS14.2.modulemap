@@ -1,6 +1,0 @@
-framework module FirebaseCoreDiagnostics {
-  umbrella header "FirebaseCoreDiagnostics-iOS14.2-umbrella.h"
-
-  export *
-  module * { export * }
-}
