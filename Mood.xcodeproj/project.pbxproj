@@ -16,6 +16,7 @@
 		8455F02125AAB7E50037B38B /* MoodWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455F02025AAB7E50037B38B /* MoodWidget.swift */; };
 		8455F02325AAB7E70037B38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8455F02225AAB7E70037B38B /* Assets.xcassets */; };
 		8455F02725AAB7E70037B38B /* MoodWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8455F01C25AAB7E50037B38B /* MoodWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		846CA13E25B37582004841D4 /* MoodOverTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CA13D25B37582004841D4 /* MoodOverTime.swift */; };
 		8475F18E25A8843900388B61 /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F18D25A8843900388B61 /* UserDefaultsController.swift */; };
 		8475F19325A8846E00388B61 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19225A8846E00388B61 /* User.swift */; };
 		8475F19825A885D300388B61 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475F19725A885D300388B61 /* DictionaryConvertible.swift */; };
@@ -75,6 +76,7 @@
 		8455F02425AAB7E70037B38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		846CA12D25B36D18004841D4 /* MoodRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoodRelease.entitlements; sourceTree = "<group>"; };
 		846CA13025B36D20004841D4 /* MoodWidgetExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoodWidgetExtensionRelease.entitlements; sourceTree = "<group>"; };
+		846CA13D25B37582004841D4 /* MoodOverTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodOverTime.swift; sourceTree = "<group>"; };
 		8475F18D25A8843900388B61 /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
 		8475F19225A8846E00388B61 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8475F19725A885D300388B61 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				8455F02025AAB7E50037B38B /* MoodWidget.swift */,
+				846CA13D25B37582004841D4 /* MoodOverTime.swift */,
 				8455F02225AAB7E70037B38B /* Assets.xcassets */,
 				8455F02425AAB7E70037B38B /* Info.plist */,
 				847EEB5025AB7A4B003FFE1E /* MoodReportLoader.swift */,
@@ -383,6 +386,7 @@
 				847EEB9925AD1C12003FFE1E /* User.swift in Sources */,
 				843E624D25AD7F1900ADAF8B /* Interger+ScaleRange.swift in Sources */,
 				847EEB5125AB7A4B003FFE1E /* MoodReportLoader.swift in Sources */,
+				846CA13E25B37582004841D4 /* MoodOverTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +435,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = F69PT65JD5;
 				INFOPLIST_FILE = MoodWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
@@ -440,7 +445,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.honey.mood.MoodWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -457,7 +462,8 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = MoodWidgetExtensionRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = F69PT65JD5;
 				INFOPLIST_FILE = MoodWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
@@ -466,7 +472,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.honey.mood.MoodWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -601,7 +607,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Mood/Mood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"mood/Preview Content\"";
 				DEVELOPMENT_TEAM = F69PT65JD5;
 				ENABLE_PREVIEWS = YES;
@@ -611,7 +617,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.honey.mood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -627,7 +633,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Mood/MoodRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"mood/Preview Content\"";
 				DEVELOPMENT_TEAM = F69PT65JD5;
 				ENABLE_PREVIEWS = YES;
@@ -637,7 +643,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.honey.mood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
