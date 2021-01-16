@@ -23,10 +23,10 @@ class UserDefaultsController {
                 fatalError("failed to read current user")
             }
         }
-        
+
         let user = User()
         user.id = UUID().uuidString
-        
+
         let db = Firestore.firestore()
         let userDoc = db.collection("users").document(user.id!)
         
@@ -40,7 +40,8 @@ class UserDefaultsController {
         } catch {
             fatalError("current_user failed to save")
         }
-    
+
+        UserDefaultsController.setCurrentUser(user)
         return user
     }
     
