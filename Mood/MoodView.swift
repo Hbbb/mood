@@ -47,14 +47,17 @@ struct MoodButton: View {
     @State private var isExpanded = false
 
 	var body: some View {
-        Button(action: { withAnimation { self.isExpanded.toggle() } }) {
+        Button(action: {
+            self.onClick()
+            withAnimation { self.isExpanded.toggle() }
+        }) {
 			VStack {
 				Text(emoji)
 				.padding(.bottom, 5)
 				Text(title)
 					.fontWeight(.semibold)
 			}
-		}
+        }
 		.padding()
 	}
 
