@@ -29,7 +29,6 @@
 		8498EED4247B095700794E8F /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EED3247B095700794E8F /* MoodView.swift */; };
 		8498EED9247B095A00794E8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8498EED8247B095A00794E8F /* Preview Assets.xcassets */; };
 		8498EEDC247B095A00794E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8498EEDA247B095A00794E8F /* LaunchScreen.storyboard */; };
-		8498EEFC247B208200794E8F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498EEFB247B208200794E8F /* TodayView.swift */; };
 		84B3756C247C474E00909E1C /* MoodReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3756B247C474E00909E1C /* MoodReport.swift */; };
 		84B375732482184E00909E1C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B375722482184E00909E1C /* Config.swift */; };
 		84FFD8E925A7EE5B004F15CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FFD8E825A7EE5B004F15CE /* Assets.xcassets */; };
@@ -86,7 +85,6 @@
 		8498EEDB247B095A00794E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8498EEDD247B095A00794E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8498EEE9247B09B500794E8F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		8498EEFB247B208200794E8F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		84B3756B247C474E00909E1C /* MoodReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReport.swift; sourceTree = "<group>"; };
 		84B3756F248216D000909E1C /* settings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = settings.xcconfig; sourceTree = "<group>"; };
 		84B375722482184E00909E1C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 				8498EEDD247B095A00794E8F /* Info.plist */,
 				84FFD8ED25A7F539004F15CE /* GoogleService-Info.plist */,
 				8498EED7247B095A00794E8F /* Preview Content */,
-				8498EEFB247B208200794E8F /* TodayView.swift */,
 				84B3756B247C474E00909E1C /* MoodReport.swift */,
 				8475F18D25A8843900388B61 /* UserDefaultsController.swift */,
 				8475F19725A885D300388B61 /* DictionaryConvertible.swift */,
@@ -390,7 +387,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8475F19825A885D300388B61 /* DictionaryConvertible.swift in Sources */,
-				8498EEFC247B208200794E8F /* TodayView.swift in Sources */,
 				8475F18E25A8843900388B61 /* UserDefaultsController.swift in Sources */,
 				84B375732482184E00909E1C /* Config.swift in Sources */,
 				84B3756C247C474E00909E1C /* MoodReport.swift in Sources */,
