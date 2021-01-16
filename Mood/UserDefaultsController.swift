@@ -13,10 +13,9 @@ import FirebaseFirestoreSwift
 
 class UserDefaultsController {
     private static let CurrentUserKey = "current_user"
-    private static let SuiteName = "com.honey.mood"
     
     static func currentUser() -> User {
-        if let dictionary = UserDefaults(suiteName: self.SuiteName)!.object(forKey: self.CurrentUserKey) as? [String: Any] {
+        if let dictionary = UserDefaults.shared.object(forKey: self.CurrentUserKey) as? [String: Any] {
             do {
                 return try User(with: dictionary)
             }
@@ -48,10 +47,16 @@ class UserDefaultsController {
     static func setCurrentUser(_ user: User?) {
         do {
             let dictionary = try user?.toDictionary()
-            UserDefaults(suiteName: self.SuiteName)!.set(dictionary, forKey: self.CurrentUserKey)
+            UserDefaults.shared.set(dictionary, forKey: self.CurrentUserKey)
         }
         catch {
             fatalError("failed to set current user")
         }
+    }
+}
+
+extension UserDefaults {
+    static var shared: UserDefaults {
+        return UserDefaults(suiteName: "group.honey.mood")!
     }
 }
