@@ -68,7 +68,7 @@ struct MoodButton: View {
             return
         }
         
-        let mood = MoodReport(score: self.score, userID: userID)
+        let mood = Mood(score: self.score, userID: userID)
 
 		let generator = UINotificationFeedbackGenerator()
 		generator.prepare()

@@ -25,7 +25,7 @@ class UserDefaultsController {
         }
 
         let user = User()
-        user.id = UUID().uuidString
+        user.id = "quinn"//UUID().uuidString
 
         let db = Firestore.firestore()
         let userDoc = db.collection("users").document(user.id!)

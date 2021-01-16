@@ -11,10 +11,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 struct MoodReportLoader {
-    static func getMoodEntries(completion: @escaping ([MoodReport]) -> ()) {
-        var mood = MoodReport(score: 1, userID: "test")
-        mood.created = Date()
-        
+    static func getMoodEntries(completion: @escaping ([Mood]) -> ()) {
         FirebaseApp.configure()
         let db = Firestore.firestore()
         
@@ -25,7 +22,7 @@ struct MoodReportLoader {
         }
 
         let coll = db.collection("users/\(userID)/moods")
-        var moods: [MoodReport] = []
+        var moods: [Mood] = []
         
         coll.getDocuments() { query, err in
             if let err = err {
@@ -36,7 +33,7 @@ struct MoodReportLoader {
 
             for doc in query.documents {
                 let result = Result {
-                  try doc.data(as: MoodReport.self)
+                  try doc.data(as: Mood.self)
                 }
 
                 switch result {

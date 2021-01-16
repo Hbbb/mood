@@ -1,5 +1,5 @@
 //
-//  MoodReport.swift
+//  Mood.swift
 //  Mood
 //
 //  Created by Harrison Borges on 5/25/20.
@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-struct MoodReport: Codable {
+struct Mood: Codable {
 	let score: Int?
 	let userID: String?
     var created: Date?
