@@ -73,6 +73,8 @@
 		8455F02025AAB7E50037B38B /* MoodWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodWidget.swift; sourceTree = "<group>"; };
 		8455F02225AAB7E70037B38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8455F02425AAB7E70037B38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846CA12D25B36D18004841D4 /* MoodRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoodRelease.entitlements; sourceTree = "<group>"; };
+		846CA13025B36D20004841D4 /* MoodWidgetExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoodWidgetExtensionRelease.entitlements; sourceTree = "<group>"; };
 		8475F18D25A8843900388B61 /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
 		8475F19225A8846E00388B61 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8475F19725A885D300388B61 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		8498EEC3247B095700794E8F = {
 			isa = PBXGroup;
 			children = (
+				846CA13025B36D20004841D4 /* MoodWidgetExtensionRelease.entitlements */,
 				84B3756F248216D000909E1C /* settings.xcconfig */,
 				84B375722482184E00909E1C /* Config.swift */,
 				8498EECE247B095700794E8F /* Mood */,
@@ -153,6 +156,7 @@
 		8498EECE247B095700794E8F /* Mood */ = {
 			isa = PBXGroup;
 			children = (
+				846CA12D25B36D18004841D4 /* MoodRelease.entitlements */,
 				841C545825A7E2E3003AF18D /* Mood.entitlements */,
 				8498EECF247B095700794E8F /* AppDelegate.swift */,
 				8498EED1247B095700794E8F /* SceneDelegate.swift */,
@@ -451,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MoodWidgetExtensionRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = F69PT65JD5;
@@ -620,7 +625,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Mood/Mood.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Mood/MoodRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"mood/Preview Content\"";
